@@ -55,18 +55,27 @@ tsconfig.tsbuildinfo
 # project
 src
 locales
+test
 
 .husky
 .commitlintrc*
+simple-git-hooks.*
 .editorconfig
 .eslintrc*
 .eslintignore
+eslint.config.*
+commitlint.config.*
+lint-staged.config.*
 .gitattributes
 .gitignore
 .lintstagedrc*
 .prettierrc*
 .prettierignore
 pnpm-lock.yaml
+pnpm-workspace.yaml
 tsconfig.json
 tsconfig.*.json
 *.config.ts
+resources/demo.png
+AGENTS.md
+tsdown.config.*

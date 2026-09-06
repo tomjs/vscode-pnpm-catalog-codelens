@@ -3,7 +3,7 @@
   "name": "vscode-pnpm-catalog",
   "displayName": "%displayName%",
   "type": "commonjs",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "packageManager": "pnpm@10.34.5",
   "description": "%description%",
   "author": {
@@ -20,7 +20,16 @@
     "url": "https://github.com/tomjs/vscode-pnpm-catalog/issues"
   },
   "keywords": [
-    "vscode"
+    "vscode",
+    "pnpm",
+    "catalog",
+    "pnpm-catalog",
+    "pnpm-workspace",
+    "workspace",
+    "package.json",
+    "dependencies",
+    "version",
+    "codelens"
   ],
   "categories": [
     "Other"
@@ -31,28 +40,71 @@
     "node": ">=14.16.0",
     "vscode": "^1.56.0"
   },
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:json"
+  ],
   "contributes": {
     "commands": [
       {
-        "command": "tomjs.xxx.showHello",
-        "title": "%tomjs.commands.hello%",
+        "command": "tomjs.pnpmCatalog.enable",
+        "title": "%pnpmCatalog.enable%",
+        "category": "%displayName%",
+        "icon": {
+          "dark": "resources/icons/toggle-off-dark.svg",
+          "light": "resources/icons/toggle-off-light.svg"
+        }
+      },
+      {
+        "command": "tomjs.pnpmCatalog.disable",
+        "title": "%pnpmCatalog.disable%",
+        "category": "%displayName%",
+        "icon": {
+          "dark": "resources/icons/toggle-on-dark.svg",
+          "light": "resources/icons/toggle-on-light.svg"
+        }
+      },
+      {
+        "command": "tomjs.pnpmCatalog.addToCatalog",
+        "title": "%pnpmCatalog.addToCatalog%",
         "category": "%displayName%"
       }
-    ]
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "tomjs.pnpmCatalog.addToCatalog",
+          "when": "false"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "tomjs.pnpmCatalog.enable",
+          "when": "editorLangId == json && !pnpmCatalog.enabled",
+          "group": "navigation@1"
+        },
+        {
+          "command": "tomjs.pnpmCatalog.disable",
+          "when": "editorLangId == json && pnpmCatalog.enabled",
+          "group": "navigation@1"
+        }
+      ]
+    }
   },
   "scripts": {
     "dev": "run-p dev:*",
     "dev:vsd": "vscode-dev --watch",
     "dev:dist": "tsdown --watch",
     "build": "vscode-dev && tsdown --minify",
+    "test": "pnpm build && node test/run.cjs",
     "lint": "eslint --fix",
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
     "@tomjs/node": "^2.2.3",
     "@tomjs/vscode": "^2.5.0",
-    "dayjs": "^1.11.23"
+    "dayjs": "^1.11.23",
+    "jsonc-parser": "^3.3.1",
+    "yaml": "^2.9.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.5.1",

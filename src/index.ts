@@ -1,15 +1,23 @@
 import type { ExtensionContext } from 'vscode';
-import { i18n, initExtension } from '@tomjs/vscode';
-import { commands, window } from 'vscode';
+import { initExtension } from '@tomjs/vscode';
+import { languages } from 'vscode';
+import { CatalogCodeLensProvider } from './catalogCodeLensProvider';
+import { registerCommands } from './commands';
+import { ExtensionState } from './extensionState';
 
 export function activate(context: ExtensionContext) {
   initExtension(context);
 
+  const state = new ExtensionState(context);
+  const provider = new CatalogCodeLensProvider(state);
+
   context.subscriptions.push(
-    commands.registerCommand('tomjs.xxx.showHello', async () => {
-      window.showInformationMessage(i18n.t('tomjs.commands.hello'));
-    }),
+    languages.registerCodeLensProvider([{ language: 'json', scheme: 'file' }], provider),
   );
+
+  registerCommands(context, state, provider);
+
+  void state.init();
 }
 
 export function deactivate() {}

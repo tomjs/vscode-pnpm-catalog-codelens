@@ -4,6 +4,7 @@
   "include": [
     "src",
     "package.json",
-    "*.config.ts"
+    "*.config.ts",
+    "tsdown.config.m/ts"
   ]
 }
