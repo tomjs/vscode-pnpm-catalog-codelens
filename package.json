@@ -1,6 +1,6 @@
 {
   "publisher": "tomjs",
-  "name": "vscode-pnpm-catalog",
+  "name": "pnpm-catalog-codelens",
   "displayName": "%displayName%",
   "type": "commonjs",
   "version": "1.0.0",
@@ -11,13 +11,13 @@
     "email": "tom@tomgao.cn"
   },
   "license": "MIT",
-  "homepage": "https://github.com/tomjs/vscode-pnpm-catalog/blob/main/README.md",
+  "homepage": "https://github.com/tomjs/vscode-pnpm-catalog-codelens/blob/main/README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tomjs/vscode-pnpm-catalog.git"
+    "url": "https://github.com/tomjs/vscode-pnpm-catalog-codelens.git"
   },
   "bugs": {
-    "url": "https://github.com/tomjs/vscode-pnpm-catalog/issues"
+    "url": "https://github.com/tomjs/vscode-pnpm-catalog-codelens/issues"
   },
   "keywords": [
     "vscode",

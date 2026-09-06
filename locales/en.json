@@ -1,5 +1,5 @@
 {
-  "displayName": "Pnpm Catalog",
+  "displayName": "PNPM Catalog Codelens",
   "description": "Manage pnpm catalogs: add dependency versions to pnpm-workspace.yaml and replace them with catalog: references",
   "pnpmCatalog.enable": "Enable pnpm catalog",
   "pnpmCatalog.disable": "Disable pnpm catalog",

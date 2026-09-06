@@ -1,5 +1,5 @@
 {
-  "displayName": "Pnpm Catalog",
+  "displayName": "PNPM Catalog Codelens",
   "description": "管理 pnpm catalog：将依赖版本写入 pnpm-workspace.yaml 并替换为 catalog: 引用",
   "pnpmCatalog.enable": "启用 pnpm catalog",
   "pnpmCatalog.disable": "禁用 pnpm catalog",
