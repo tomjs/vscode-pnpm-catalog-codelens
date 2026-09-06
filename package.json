@@ -3,7 +3,7 @@
   "name": "pnpm-catalog-codelens",
   "displayName": "%displayName%",
   "type": "commonjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "pnpm@10.34.5",
   "description": "%description%",
   "author": {
