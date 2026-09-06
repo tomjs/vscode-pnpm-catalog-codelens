@@ -130,6 +130,12 @@ catalogs:
 - VS Code `^1.56`
 - A pnpm workspace: `pnpm-workspace.yaml` at the project root (the extension can create it on request). The default `catalog:` protocol requires pnpm ≥ 9.5; named catalogs (`catalogs:`) require a pnpm version that supports them.
 
+## Thanks
+
+感谢并参考了 [vscode-versionlens](https://github.com/versionlens/vscode-versionlens) 项目，本扩展的 CodeLens 交互模式深受其启发。
+
+Thanks to the [vscode-versionlens](https://github.com/versionlens/vscode-versionlens) project — this extension's CodeLens interaction pattern is heavily inspired by it.
+
 ## License
 
 [MIT](./LICENSE)
