@@ -7,6 +7,12 @@ export default defineConfig((options) => {
     target: 'node14',
     deps: {
       neverBundle: ['vscode'],
+      alwaysBundle: id => !id.startsWith('vscode') && !id.startsWith('node:'),
+    },
+    inputOptions: {
+      resolve: {
+        mainFields: ['module', 'main'],
+      },
     },
     clean: true,
     sourcemap: !!options.watch,

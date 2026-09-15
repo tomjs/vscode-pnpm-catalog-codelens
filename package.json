@@ -41,7 +41,10 @@
     "vscode": "^1.56.0"
   },
   "activationEvents": [
-    "onLanguage:json"
+    "onLanguage:json",
+    "onCommand:tomjs.pnpmCatalog.enable",
+    "onCommand:tomjs.pnpmCatalog.disable",
+    "onCommand:tomjs.pnpmCatalog.addToCatalog"
   ],
   "contributes": {
     "commands": [
