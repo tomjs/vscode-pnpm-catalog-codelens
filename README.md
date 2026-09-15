@@ -25,7 +25,7 @@ A VS Code extension that manages [pnpm catalogs](https://pnpm.io/catalogs): it m
 
 ### 使用方式
 
-![demo](https://github.com/tomjs/vscode-pnpm-catalog-codelens/blob/main/resources/demo.png)
+![demo](https://raw.githubusercontent.com/tomjs/vscode-pnpm-catalog-codelens/refs/heads/main/resources/demo.png)
 
 1. 打开属于 pnpm workspace 的 `package.json`。
 2. 点击标题栏图标（或从命令面板执行 **启用 pnpm catalog**）开启服务。
@@ -86,7 +86,7 @@ catalogs:
 
 ### Usage
 
-![demo](https://github.com/tomjs/vscode-pnpm-catalog-codelens/blob/main/resources/demo.png)
+![demo](https://raw.githubusercontent.com/tomjs/vscode-pnpm-catalog-codelens/refs/heads/main/resources/demo.png)
 
 1. Open a `package.json` that belongs to a pnpm workspace.
 2. Click the title-bar icon (or run **Enable pnpm catalog** from the Command Palette) to turn the service on.
